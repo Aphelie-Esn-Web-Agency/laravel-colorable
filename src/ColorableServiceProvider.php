@@ -21,7 +21,7 @@ class ColorableServiceProvider extends ServiceProvider
         });
 
         // Bind config file
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'colorable');
+        $this->mergeConfigFrom(__DIR__.'config/config.php', 'colorable');
 
     }
 
