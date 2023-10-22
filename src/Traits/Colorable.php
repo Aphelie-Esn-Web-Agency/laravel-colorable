@@ -6,13 +6,23 @@ use Aphelie\Colorable\Models\Color;
 
 trait Colorable
 {
+    /*
+     * Get all of the model's colors.
+     */
     public function colors()
     {
-        return $this->morphMany(Color::class, 'colorable');
+        return $this->morphToMany(Color::class, 'colorable')
+            ->withTimestamps();
     }
 
-    public function setColor($hexValue = null)
+    /*
+     * Add a color to the model, default one if no color is given.
+     */
+    public function setColor($key = null, $hexValue = null)
     {
+        if (is_null($key)) {
+            $hexValue = config('colorable.default_color_key');
+        }
         if (is_null($hexValue)) {
             $hexValue = config('colorable.default_color');
         }

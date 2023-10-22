@@ -38,7 +38,7 @@ class ColorableServiceProvider extends ServiceProvider
          * php artisan vendor:publish --provider="Aphelie\Colorable\ColorableServiceProvider" --tag="config"
          */
         if ($this->app->runningInConsole()) {
-            $path = realpath(__DIR__.'config/config.php');
+            $path = realpath(__DIR__.'/config/config.php');
             $this->publishes([$path => config_path('colorable.php'), ], 'config');
 
 
