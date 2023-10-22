@@ -35,10 +35,10 @@ class ColorableServiceProvider extends ServiceProvider
 
         /*
          * Copy the config file in laravel  parent project
-         * php artisan vendor:publish --provider="Allegro\Acoss\AcossServiceProvider" --tag="config"
+         * php artisan vendor:publish --provider="Aphelie\Colorable\ColorableServiceProvider" --tag="config"
          */
         if ($this->app->runningInConsole()) {
-            $path = realpath(__DIR__.'/../config/colorable.php');
+            $path = realpath(__DIR__.'/../config/config.php');
             $this->publishes([$path => config_path('colorable.php'), ], 'config');
 
 
