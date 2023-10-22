@@ -2,7 +2,7 @@
 
 namespace LaravelColorable\Traits;
 
-use LaravelColorable\Models\Color;
+use Aphelie\LaravelColorable\Models\Color;
 
 trait Colorable
 {

@@ -1,7 +1,8 @@
 {
-  "name": "Aphelie-Esn-Web-Agency/laravel-colorable",
+  "name": "aphelie/laravel-colorable",
   "description": "A Laravel package to add colorable trait to models",
   "type": "library",
+  "license": "MIT",
   "require": {
     "php": ">=7.3",
     "illuminate/support": ">5.0"
@@ -14,8 +15,11 @@
   "extra": {
     "laravel": {
       "providers": [
-        "LaravelColorable\\ServiceProvider"
-      ]
+        "Aphelie\\LaravelColorable\\ServiceProvider"
+      ],
+      "aliases": {
+        "Acoss": "Aphelie\\LaravelColorable\\Facade\\Acoss"
+      }
     }
   }
 }
