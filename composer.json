@@ -15,7 +15,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Aphelie\\Colorable\\ServiceProvider"
+        "Aphelie\\Colorable\\ColorableServiceProvider"
       ],
       "aliases": {
         "Acoss": "Aphelie\\Colorable\\Facade\\Acoss"
