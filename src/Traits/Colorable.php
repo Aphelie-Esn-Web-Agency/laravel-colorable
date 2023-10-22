@@ -11,8 +11,11 @@ trait Colorable
         return $this->morphMany(Color::class, 'colorable');
     }
 
-    public function setColor($hexValue)
+    public function setColor($hexValue = null)
     {
+        if (is_null($hexValue)) {
+            $hexValue = config('colorable.default_color');
+        }
         return $this->colors()->create(['color_value' => $hexValue]);
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "aphelie/laravel-colorable",
+  "name": "aphelie/colorable",
   "description": "A Laravel package to add colorable trait to models",
   "type": "library",
   "license": "MIT",
@@ -15,10 +15,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Aphelie\\LaravelColorable\\ServiceProvider"
+        "Aphelie\\Colorable\\ServiceProvider"
       ],
       "aliases": {
-        "Acoss": "Aphelie\\LaravelColorable\\Facade\\Acoss"
+        "Acoss": "Aphelie\\Colorable\\Facade\\Acoss"
       }
     }
   }
