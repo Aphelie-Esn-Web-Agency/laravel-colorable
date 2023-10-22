@@ -38,15 +38,15 @@ class ColorableServiceProvider extends ServiceProvider
          * php artisan vendor:publish --provider="Aphelie\Colorable\ColorableServiceProvider" --tag="config"
          */
         if ($this->app->runningInConsole()) {
-            $path = realpath(__DIR__.'/../config/config.php');
+            $path = realpath(__DIR__.'config/config.php');
             $this->publishes([$path => config_path('colorable.php'), ], 'config');
 
 
-            $files = array_diff(scandir(__DIR__. '/../database/migrations'), array('..', '.'));
+            $files = array_diff(scandir(__DIR__. 'database/migrations'), array('..', '.'));
 
             foreach($files as $file){
                 $this->publishes([
-                    __DIR__ . '/../database/migrations/'.$file => database_path('migrations/' . date('Y_m_d_His', time()) . '_' . basename($file, '.stub')),
+                    __DIR__ . 'database/migrations/'.$file => database_path('migrations/' . date('Y_m_d_His', time()) . '_' . basename($file, '.stub')),
                     // you can add any number of migrations here
                 ], 'migrations');
             }
