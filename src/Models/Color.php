@@ -1,6 +1,6 @@
 <?php
 
-namespace Aphelie\LaravelColorable\Models;
+namespace Aphelie\Colorable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

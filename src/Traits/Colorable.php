@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelColorable\Traits;
+namespace Aphelie\Colorable\Traits;
 
-use Aphelie\LaravelColorable\Models\Color;
+use Aphelie\Colorable\Models\Color;
 
 trait Colorable
 {
